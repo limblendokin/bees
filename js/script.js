@@ -1,7 +1,7 @@
 var smola20searchIdBaseLink = "https://smola20.ru/bitrix/admin/sale_order.php?PAGEN_1=1&SIZEN_1=20&lang=ru&set_filter=Y&adm_filter_applied=0&filter_account_number=S-";
-var toKate = "../toKate.html";
-var toNasty = "../toNasty.html";
-var toCredentials = "../toCredentials.html"; 
+var toKate = "/toKate.html";
+var toNasty = "/toNasty.html";
+var toCredentials = "/toCredentials.html"; 
 var on_order_id_submit=()=>{
     var order_id = $('#order_id').val();
     order_id = order_id.trim();
