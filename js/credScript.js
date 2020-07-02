@@ -4,8 +4,18 @@ $(document).ready(()=>{
     $('#credentials_submit').click(function(){
         var credentials = $('#credentials').val();
         credentials = credentials.trim();
-        crmSearchBaseLink += credentials;
-        window.open(crmSearchBaseLink, '_blank');
+        var open = crmSearchBaseLink;
+        open += credentials;
+        window.open(open, '_blank');
+    });
+    $('#credentials').keyup(function(event){
+        if (event.keyCode === 13) {
+            var credentials = $('#credentials').val();
+            credentials = credentials.trim();
+            var open = crmSearchBaseLink;
+            open += credentials;
+            window.open(open, '_blank');
+        }
     });
     $('#order_id_submit').click(function(){
         var order_id = $('#order_id').val();
@@ -13,8 +23,21 @@ $(document).ready(()=>{
         if(order_id.substr(0,2)=="S-"){
             order_id=order_id.substr(2,5);
         }
-        smola20searchIdBaseLink+=order_id;
-        window.location = smola20searchIdBaseLink;
-    })
+        var location = smola20searchIdBaseLink;
+        location+=order_id;
+        window.location = location;
+    });
+    $('#order_id').keyup(function(event){
+        if (event.keyCode === 13) {
+            var order_id = $('#order_id').val();
+            order_id = order_id.trim();
+            if(order_id.substr(0,2)=="S-"){
+                order_id=order_id.substr(2,5);
+            }
+            var location = smola20searchIdBaseLink;
+            location+=order_id;
+            window.location = location;
+        }
+    });
 })
 
