@@ -1,6 +1,7 @@
 var smola20searchIdBaseLink = "https://smola20.ru/bitrix/admin/sale_order.php?PAGEN_1=1&SIZEN_1=20&lang=ru&set_filter=Y&adm_filter_applied=0&filter_account_number=S-";
 var managerBase = "./toManager.html";
 var invoiceBase = "./invoiceId.html";
+var toCredentials = "./toCredentials.html";
 var valid = true;
 $(document).ready(()=>{
     $('#order_id_submit').click(()=>{
@@ -26,7 +27,7 @@ var tryPerformRelocation = (order_id) =>{
     if(order_id.length == 5){
         var toSmola = smola20searchIdBaseLink;
         toSmola+=order_id;
-        window.location = toSmola;
+        window.open = toSmola;
     }
     else if(order_id.length == 4){
         window.location = `${invoiceBase}?order_id=${order_id}`;
