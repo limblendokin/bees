@@ -27,7 +27,7 @@ var tryPerformRelocation = (order_id) =>{
     if(order_id.length == 5){
         var toSmola = smola20searchIdBaseLink;
         toSmola+=order_id;
-        window.open = toSmola;
+        window.open(toSmola);
     }
     else if(order_id.length == 4){
         window.location = `${invoiceBase}?order_id=${order_id}`;
