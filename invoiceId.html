@@ -8,7 +8,8 @@
     <title>Smola20 Script</title>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="./js/managerScript.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/invoiceScript.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 
@@ -34,29 +35,16 @@
 
       <section class="jumbotron text-center">
         <div class="container">
-          <h1 class="jumbotron-heading">Переведите звонок на 3333</h1>
-          <p class="lead text-muted">Это заказ №<strong id="order_info"></strong> для Анастасии Барановой, переведите его по добавочному номеру 3333</p>
-          <p id="test"></p>
+          <h1 id="header" class="jumbotron-heading">Номер платежного счета</h1>
+          <p id="message" class="lead text-muted">Это скорее всего номер платежного счета клиента, наш номер заказа начинается с латинской буквы S и далее идет пятизначное число</p>
+          <input id="order_id" type="text" class="form-control" placeholder="Номер заказа">
+          <p class="mt-3">
+            <a id="order_id_submit"  class="btn btn-primary mr-3 text-light">Знает</a>
+            <a id="no_order_id_submit" class="btn btn-secondary mr-3 text-light">Найти по данным</a>
+            <a id="manager_submit"  class="btn btn-secondary text-light">Перевести на менеджера</a>
+          </p>
         </div>
       </section>
-        
-       <!-- <div class="card mb-4 box-shadow">
-            <div class="card-body">
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                    </div>
-                </div>
-            </div>
-            <img class="card-img-top" src="./images/responsible.png" alt="Card image cap">
-        </div>
-        -->
     </main>
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
   </body>
 </html>
